@@ -6,15 +6,11 @@ function addMovie(e) {
   let inputField = document.querySelector("input");
 
   const movie = document.createElement("li");
-  message.textContent = `Movie deleted!`;
-  revealMessage();
-
 
   const movieTitle = document.createElement("span");
   movieTitle.textContent = inputField.value;
   movieTitle.addEventListener("click", crossOffMovie);
   movie.appendChild(movieTitle);
-
 
   const deleteBtn = document.createElement("button");
   deleteBtn.textContent = "x";
@@ -28,9 +24,6 @@ function addMovie(e) {
 }
 
 function deleteMovie(e) {
-  message.textContent = `Movie deleted!`;
-  revealMessage();
-
   e.target.parentNode.remove();
 }
 
@@ -42,6 +35,4 @@ function crossOffMovie(e) {
   } else {
     message.textContent = "Movie added back!";
   }
-
-  revealMessage();
 }
